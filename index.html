@@ -50,12 +50,18 @@
 </head>
 
 <script type="text/javascript">
-var _iub = _iub || [];
-_iub.csConfiguration = {"enableCcpa":true,"countryDetection":true,"perPurposeConsent":true,"enableTcf":true,"googleAdditionalConsentMode":true,"ccpaAcknowledgeOnDisplay":true,"whitelabel":false,"lang":"en","siteId":2392179,"floatingPreferencesButtonDisplay":"bottom-right","cookiePolicyId":68662029,"privacyPolicyUrl":"https://mindustry.me/pp","cookiePolicyUrl":"https://mindustry.me/pp", "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"rejectButtonDisplay":true,"listPurposes":true,"position":"float-top-center" }};
-</script>
-<script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/stub-v2.js"></script>
-<script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
-<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+$(document).ready(function(){   
+    setTimeout(function () {
+        $("#cookieConsent").fadeIn(200);
+     }, 4000);
+    $("#closeCookieConsent, .cookieConsentOK").click(function() {
+        $("#cookieConsent").fadeOut(200);
+    }); 
+}); </script>
+<div id="cookieConsent">
+    <div id="closeCookieConsent">x</div>
+    This website is using cookies. <a href="https://www.mindustry.me/pp" target="_blank">More info</a>. <a class="cookieConsentOK">That's Fine</a>
+</div>
 
 <body>
 
